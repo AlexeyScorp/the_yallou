@@ -1,0 +1,144 @@
+@import '../date/date.scss';
+
+#posts_wrap {
+    background: $PostsBackground;
+    min-height: 509px;
+    padding: 42px 0 21px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+
+    &::after {
+        @include end-content;
+        box-shadow: 0px -2px 6px 3px $Main-Black-Color;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        box-shadow: 0px 2px 6px 1px $Main-Black-Color;
+    }
+
+    #posts_box {
+
+        .post_logo {
+            margin-bottom: 40px;
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+                color: $Wite-Font-Color;
+                font-size: 37px;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+        }
+
+        #post_content {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 34px;
+            justify-content: center;
+
+            .post_discription,
+            .post_image {
+                background: $Background-Post-Color;
+                height: 233px;
+
+            }
+
+            .main_post {
+                position: relative;
+                display: inline-flex;
+                flex-wrap: wrap;
+                width: 682px;
+
+                .post_discription,
+                .post_image {
+                    width: 341px;
+                }
+
+                .post_discription {
+                    box-sizing: border-box;
+                    padding: 25px 38px 34px 31px;
+                    color: $Wite-Font-Color;
+                    line-height: 1.308;
+                    position: relative;
+
+                    span {
+                        font-size: 29px;
+                        text-align: left;
+                        overflow: hidden;
+                        display: block;
+                        max-height: 174px;
+                        font-weight: 300;
+                        line-height: 1.2;
+                    }
+
+                }
+
+                .post_main_date {
+                    background: $Background-Post-Date-Color;
+                    width: 113px;
+                    height: 86px;
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 15px 0 9px;
+
+                    h3 {
+                        margin: 0;
+                        font-size: 48px;
+                        color: $Wite-Font-Color;
+                        font-weight: bold;
+                        line-height: 0.744;
+                        text-align: center;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 21px;
+                        color: $Orange-Font-Color;
+                        line-height: 1.805;
+                        text-align: center;
+                        text-transform: uppercase;
+                        line-height: 1.1;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .next_post {
+                overflow: hidden;
+                position: relative;
+                height: 233px;
+                width: 329px;
+                margin-top: 84px;
+
+                .post_discription,
+                .post_image {
+                    position: absolute;
+                    width: 329px;
+                }
+
+                .add_post {
+                    background-image: $PostsTwitter;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                .post_image {
+                    visibility: hidden;
+                }
+            }
+        }
+
+    }
+
+}

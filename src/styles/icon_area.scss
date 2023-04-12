@@ -1,0 +1,46 @@
+@import '../date/date.scss';
+
+#icon_area_wrap {
+    position: relative;
+    min-height: 212px;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        @include end-content;
+    }
+
+    .icon_area_box {
+        width: 338px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid $Border-Color;
+        border-right: 1px solid $Border-Color;
+
+
+        .icon_area_content {
+            color: $Main-Black-Color;
+
+            .icon_image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                width: 109px;
+                height: 109px;
+
+                img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            span {
+                font-size: 27px;
+                text-transform: uppercase;
+                line-height: 1.2;
+            }
+        }
+    }
+}

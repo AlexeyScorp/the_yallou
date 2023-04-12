@@ -1,0 +1,46 @@
+//Logo
+$LogoAfter: url(../images/header/logo-one.png);
+$LogoBefore: url(../images/header/logo-two.png);
+$Main-Logo-Size: 82px;
+$FooterLogoSize: 54px;
+//Images
+$HeaderBackground: url(../images/header/background.png);
+$PostsBackground: url(../images/posts/background_post.png);
+$PostsTwitter: url(../images/posts/twitter.png);
+$TemplateComputer: url(../images/template_inform/computer.png);
+$TemplateTablet: url(../images/template_inform/tablet.png);
+$TemplatePhone: url(../images/template_inform/phone.png);
+//Color
+$Wite-Font-Color: #fff;
+$Yellow-Font-Color: #ffcc00;
+$Gray-Font-Color: #999;
+$Orange-Font-Color: #996600;
+$Main-Orange-Color: #f5c506;
+$Main-Black-Color: #000;
+$Border-Color: transparentize($Main-Black-Color, 0.86);
+$Background-Color: transparentize(#e9e9e9, 0.6);
+$Background-Post-Color: #ec9e03;
+$Background-Post-Date-Color: #ddb101;
+$Background-Template-Color: #4c4c4c;
+$Background-Footer-Color: $Background-Template-Color;
+$Background-Menu-Color: #f5c506;
+$Background-Menu-3D-Color: #ddb101;
+$Background-Menu-Hover-Color: #ec9e03;
+$Menu-Font-Color: #b99403;
+
+//Global Mixin
+@mixin end-content {
+    content: '';
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+@mixin absolute-stretch {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

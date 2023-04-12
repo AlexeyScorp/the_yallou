@@ -1,0 +1,74 @@
+@import '../date/date.scss';
+
+footer {
+    background: $Background-Footer-Color;
+    min-height: 73px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        box-shadow: 0px -2px 6px 1px $Main-Black-Color;
+    }
+
+    #footer_wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 8px 0;
+
+        #footer_logo_wrap {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            .footer_name {
+                margin: 0;
+                padding-left: ($FooterLogoSize+9px);
+                height: $FooterLogoSize;
+                display: inline-flex;
+                font-size: 29px;
+                color: $Wite-Font-Color;
+                font-style: italic;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-shadow: 0px 2px 0px $Border-Color;
+                align-items: center;
+            }
+
+            .footer_logo {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    @include logo-options($FooterLogoSize);
+                    background: center no-repeat $LogoAfter;
+                    background-size: cover;
+                }
+
+                &::before {
+                    content: '';
+                    @include logo-options($FooterLogoSize);
+                    background: center no-repeat $LogoBefore;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .footer_autor {
+            font-size: 17px;
+            color: $Wite-Font-Color;
+            line-height: 1.2;
+            height: $FooterLogoSize;
+            display: inline-flex;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}

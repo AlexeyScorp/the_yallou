@@ -1,0 +1,131 @@
+@import '../date/date.scss';
+
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+#slider_wrap {
+    position: relative;
+    min-height: 350px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 71px;
+
+    #slider_navigation {
+        position: absolute;
+        @include absolute-stretch;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            display: inline-block;
+            min-height: 57px;
+            min-width: 32px;
+            background: $Main-Orange-Color;
+        }
+    }
+
+    #slider_body {
+        min-width: 600px;
+        min-height: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+        &::after {
+            @include end-content;
+        }
+
+        #slide_prevew {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 550px;
+            min-height: 330px;
+            overflow: hidden;
+            box-sizing: border-box;
+
+
+            &::after {
+                @include end-content;
+            }
+
+            .slide_image {
+                background-position: center;
+                background-size: cover;
+                width: 549px;
+                height: 327px;
+                box-sizing: border-box;
+                position: absolute;
+                transition: all 2s;
+                animation-duration: 1s;
+                animation-name: slidein;
+            }
+        }
+
+        #slide_discription {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-width: 370px;
+            max-height: inherit;
+            overflow: hidden;
+
+            div {
+                height: 75.606px;
+                overflow: hidden;
+            }
+
+            .first_line {
+                //position: absolute;
+                width: 100%;
+                color: $Yellow-Font-Color;
+                top: 0;
+            }
+
+            .second_line {
+                //position: absolute;
+                width: 100%;
+                color: $Wite-Font-Color;
+                bottom: 0;
+            }
+
+            span {
+                display: block;
+                margin: 0 auto;
+                font-size: 63px;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+                white-space: nowrap;
+                width: inherit;
+            }
+        }
+
+        .wait_slide_right {
+            position: absolute;
+            //left: 100%;
+            transform: translateX(101%);
+        }
+
+        .wait_slide_left {
+            position: absolute;
+            // right: 100%;
+            transform: translateX(-101%);
+        }
+    }
+}

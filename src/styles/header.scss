@@ -1,0 +1,155 @@
+@import '../date/date.scss';
+
+@mixin logo-options ($size) {
+    height: $size;
+    width: $size;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+#header_wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $HeaderBackground;
+    min-height: 556px;
+
+    &::after {
+        @include end-content;
+    }
+}
+
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    &::after {
+        @include end-content;
+    }
+
+    #main-discription {
+        box-sizing: border-box;
+        margin: 28px 140px;
+        height: $Main-Logo-Size;
+        color: $Wite-Font-Color;
+        text-shadow: 0px 2px 0px $Border-Color;
+        line-height: 1.2;
+        font-weight: 400;
+
+        .main-logo {
+            position: relative;
+
+            &::after {
+                content: '';
+                @include logo-options($Main-Logo-Size);
+                background: center no-repeat $LogoAfter;
+            }
+
+            &::before {
+                content: '';
+                @include logo-options($Main-Logo-Size);
+                background: center no-repeat $LogoBefore;
+            }
+        }
+
+        .main-name {
+            padding-left: ($Main-Logo-Size+18px);
+            height: $Main-Logo-Size;
+            display: inline-flex;
+            align-items: center;
+            font-size: 41pt;
+            text-transform: uppercase;
+            margin: 0;
+
+            @keyframes pulse {
+                from {
+                    opacity: 100%;
+                }
+
+                25% {
+                    opacity: 75%;
+                }
+
+                50% {
+                    opacity: 30%;
+                }
+
+                75% {
+                    opacity: 75%;
+                }
+
+                to {
+                    opacity: 100%;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    animation: 2s linear infinite pulse;
+                }
+
+                &::before {
+                    animation: 2s linear 1s infinite pulse;
+                }
+            }
+        }
+
+        .main-autor {
+            font-size: 13.5pt;
+            text-transform: uppercase;
+            margin: 0 18px;
+        }
+    }
+
+    nav {
+        cursor: pointer;
+    }
+
+    #nav-box {
+        box-sizing: border-box;
+        margin: 28px 140px;
+        height: $Main-Logo-Size;
+        color: $Wite-Font-Color;
+        text-shadow: 0px 2px 0px $Border-Color;
+        line-height: 1.2;
+        font-weight: 400;
+        align-items: center;
+        display: flex;
+    }
+
+    #nav-click {
+        position: relative;
+        display: block;
+        border-radius: 3px;
+        width: 50px;
+        height: 6px;
+        background: $Wite-Font-Color;
+        margin: 16px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border-radius: 3px;
+            background: $Wite-Font-Color;
+            top: 15px;
+            @include end-content;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border-radius: 3px;
+            background: $Wite-Font-Color;
+            top: -15px;
+        }
+    }
+}

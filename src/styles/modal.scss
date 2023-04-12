@@ -1,0 +1,27 @@
+@import '../date/date.scss';
+
+#modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    @include absolute-stretch;
+    background: transparentize($Main-Black-Color, 0.2);
+    z-index: 1;
+}
+
+.modal_state {
+    display: none;
+    visibility: hidden;
+}
+
+.modal_active {
+    display: flex;
+    visibility: visible;
+}
+
+#moda_lwrap {
+    margin: 0 auto;
+}
