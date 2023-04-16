@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BaseInformation from '../date/date';
+import BaseInformation from '../data/data';
 import IconAreaBody from './icon_area_box';
 
 const IconArea = () => {

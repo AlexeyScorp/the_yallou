@@ -1,6 +1,6 @@
 import React from 'react';
 import MainSlider from './slider';
-import BaseInformation from '../date/date';
+import BaseInformation from '../data/data';
 import Modal from './modal';
 
 const MainHeader = ({ setVisible }) => {

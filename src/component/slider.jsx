@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import BaseInformation from '../date/date';
+import BaseInformation from '../data/data';
 import Slide from './slide';
 
 const MainSlider = () => {

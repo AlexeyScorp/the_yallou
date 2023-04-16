@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import BaseInformation from '../date/date';
+import BaseInformation from '../data/data';
 import classnames from "classnames";
 
 const Slide = (iniClasses) => {
