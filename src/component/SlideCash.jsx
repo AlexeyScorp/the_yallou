@@ -4,6 +4,8 @@ import classnames from "classnames";
 
 // let cx = classNames.bind();
 
+// Файл не подключен. Использовался для эксперементов.
+
 const SlideCash = (iniClasses) => {
 
 
