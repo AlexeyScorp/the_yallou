@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import MainHeader from './component/header';
-import IconArea from './component/icon_area';
-import Posts from './component/posts';
-import TemplateInform from './component/template_imformation';
-import Footer from './component/footer';
-import Modal from './component/modal';
-import NavMenu from './component/mav_menu';
+import MainHeader from './views/layouts/header/header';
+import IconArea from './views/layouts/icon_area/icon_area';
+import Posts from './views/layouts/posts/posts';
+import TemplateInform from './views/layouts/template_informftion/template_imformation';
+import Footer from './views/layouts/footer/footer';
+import Modal from './views/component/modal/modal';
+import NavMenu from './views/component/nav/mav_menu';
 
 function App() {
 
